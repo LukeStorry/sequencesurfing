@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import CourseCard from "../components/CourseCard.astro";
+import sunsetBarrel from "../images/sunset-barrel.jpeg";
 
 const courses = await getCollection("courses");
 ---
@@ -10,7 +12,16 @@ const courses = await getCollection("courses");
   title="Home"
   description="Sequence Surfing, coaching, training and conditioning. Join Ben somewhere around the world or online, for a beginner to elite coaching to enable you to get clear progression points and areas to pinpoint future success."
 >
+  <Image
+    class="p-4 m-4"
+    src={sunsetBarrel}
+    alt="Ben catching a barrel at sunset"
+  />
   <div id="courses" class="flex flex-wrap justify-center gap-4">
-    {courses.map((course) => <CourseCard course={course} />)}
+    {
+      courses
+        .toSorted((a, b) => (a.data.order > b.data.order ? 1 : -1))
+        .map((course) => <CourseCard course={course} />)
+    }
   </div>
 </Layout>

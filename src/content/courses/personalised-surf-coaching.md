@@ -2,6 +2,9 @@
 title: "Personalised Surf Coaching"
 order: 3
 description: "Join Ben in person somewhere around the world or online, for a beginner to elite coaching to enable you to get clear progression points and areas to pinpoint future success. This is the quickest and most effective way to move your surfing forwards with video analysis and feedback as well as practices to use every time you surf and a surf film."
+image:
+  src: "../../images/walking-with-boards.jpeg"
+  alt: "Ben coaching an individual as they walk between surf breaks"
 ---
 
 Need something more personal?

@@ -1,7 +1,10 @@
 ---
 title: "Tailor-made Surf Program"
-order: 4
+order: 6
 description: "Individualized combination of all the courses we offer custom built to suit you and progress your surfing to the maximum it can be. This includes weekly check-ups, feedback and access to all course modules."
+image:
+  src: "../../images/yellow-foamie-topturn.jpeg"
+  alt: "Ben ripping a foamie backwards whilst walking along it"
 ---
 
 This is our ultimate program and for those who are looking to catapult their surfing to new boundaries. Get individual weekly check-ups, feedback and calls, access to all courses and a personal athlete program tailored to your current capabilities.
