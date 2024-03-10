@@ -1,10 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import CourseCard from "../components/CourseCard.astro";
+
+const courses = await getCollection("courses");
 ---
 
 <Layout title="Home">
-	
-	<main>
-		
-	</main>
+  {courses.map((course) => <CourseCard {...course.data} slug={course.slug} />)}
+  <main></main>
 </Layout>
