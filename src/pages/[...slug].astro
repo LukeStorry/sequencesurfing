@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import { getCollection, CollectionEntry } from "astro:content";
+
+import Layout from "../layouts/Layout.astro";
+type Props = { course: CollectionEntry<"course"> };
+
+export async function getStaticPaths() {
+  const courses = await getCollection("courses");
+  return courses.map((course) => ({
+    params: { slug: course.slug },
+    props: { course },
+  }));
+}
+
+const { course } = Astro.props;
+const { title, description, image } = course.data;
+const { Content } = await course.render();
+---
+
+<Layout title={title}>
+  <h2 class="font-bold text-xl">{title}</h2>
+
+  <p class="text-lg p-3">{description}</p>
+  {image && <Image src={image.src} alt={image.alt} />}
+  <Content />
+</Layout>
