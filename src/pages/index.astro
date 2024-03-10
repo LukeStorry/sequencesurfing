@@ -7,6 +7,6 @@ const courses = await getCollection("courses");
 ---
 
 <Layout title="Home">
-  {courses.map((course) => <CourseCard {...course.data} slug={course.slug} />)}
+  {courses.map((course) => <CourseCard course={course} />)}
   <main></main>
 </Layout>
