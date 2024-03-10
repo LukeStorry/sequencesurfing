@@ -20,9 +20,14 @@ const { Content } = await course.render();
 ---
 
 <Layout title={title} description={description}>
-  <h2 class="font-bold text-xl">{title}</h2>
+  <h2 class="text-xl font-bold">{title}</h2>
 
-  <p class="text-lg p-3">{description}</p>
+  <p class="p-3 text-lg">{description}</p>
   {image && <Image src={image.src} alt={image.alt} />}
-  <Content />
+  <div
+    class="prose-headings:font-bold prose-headings:underline prose-headings:mt-2 prose-p:my-4
+    prose-li:ml-6 prose-li:list-disc"
+  >
+    <Content />
+  </div>
 </Layout>
