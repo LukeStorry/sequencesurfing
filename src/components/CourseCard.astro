@@ -12,10 +12,13 @@ const {
 } = Astro.props;
 ---
 
-<li id={slug} class="max-w-md list-none rounded border-4 border-yellow-200 p-2">
+<li
+  id={slug}
+  class="max-w-lg bg-white bg-opacity-85 list-none rounded border-4 border-yellow-200 p-4"
+>
   <a href={slug}>
     <h2 class="text-lg font-bold">{title}</h2>
-    <p class="font-body">{description}</p>
+    <p class="font-body my-2">{description}</p>
     {image && <Image src={image.src} alt={image.alt} />}
   </a>
 </li>

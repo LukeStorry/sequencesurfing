@@ -13,10 +13,12 @@ const courses = await getCollection("courses");
   description="Sequence Surfing, coaching, training and conditioning. Join Ben somewhere around the world or online, for a beginner to elite coaching to enable you to get clear progression points and areas to pinpoint future success."
 >
   <Image
-    class="p-4 m-4"
+    class="mb-4 w-screen min-h-screen -mt-4 fixed aspect-square lg:-top-24 left-0 -z-10"
     src={sunsetBarrel}
-    alt="Ben catching a barrel at sunset"
+    aspect-square
+    alt="background image: Ben catching a barrel at sunset"
   />
+
   <div id="courses" class="flex flex-wrap justify-center gap-4">
     {
       courses
