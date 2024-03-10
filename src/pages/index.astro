@@ -7,6 +7,7 @@ const courses = await getCollection("courses");
 ---
 
 <Layout title="Home">
-  {courses.map((course) => <CourseCard course={course} />)}
-  <main></main>
+  <div id="courses" class="flex flex-wrap gap-4 justify-center">
+    {courses.map((course) => <CourseCard course={course} />)}
+  </div>
 </Layout>
