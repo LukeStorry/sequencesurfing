@@ -3,7 +3,7 @@ title: "Surf Skate Course"
 description: "Surf Skating is an undeniable way of boosting your surf performance from beginner technique to advanced maneuvers as quickly as possible. A step-by step fundamental approach, this course will enable you to practice the basic motor skills on land and easily transfer them into the water. Whether boosting airs or finding your balance this course is for you."
 order: 5
 image:
-  src: "../../images/surfskate.jpeg"
+  src: "../../images/surfskate.jpg"
   alt: "Ben ripping a topturn on a surfskate"
 ---
 
