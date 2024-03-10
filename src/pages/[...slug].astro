@@ -22,10 +22,10 @@ const { Content } = await course.render();
 <Layout title={title} description={description}>
   <h2 class="text-xl font-bold">{title}</h2>
 
-  <p class="p-3 text-lg">{description}</p>
+  <p class="p-3 text-lg font-body">{description}</p>
   {image && <Image src={image.src} alt={image.alt} />}
   <div
-    class="prose-headings:font-bold prose-headings:underline prose-headings:mt-2 prose-p:my-4
+    class="font-body prose-headings:font-bold prose-headings:underline prose-headings:mt-2 prose-p:my-4
     prose-li:ml-6 prose-li:list-disc"
   >
     <Content />

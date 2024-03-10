@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Original Surfer", ...defaultTheme.fontFamily.sans],
+        body: ["Mooli", ...defaultTheme.fontFamily.sans],
       },
     },
   },

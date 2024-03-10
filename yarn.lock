@@ -495,6 +495,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@fontsource/mooli@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/mooli/-/mooli-5.0.2.tgz#0dc27af05d27e8285dd219b16af15f854bb524d1"
+  integrity sha512-BR+yV/oBAx2Fnev3vFkDPDohYQReAysavhQL8MtpbvMGgzPfmTlxPhKgqdvTyQuBkGAhKw/UYbrvMa7tMDZozg==
+
 "@fontsource/original-surfer@^5.0.18":
   version "5.0.18"
   resolved "https://registry.yarnpkg.com/@fontsource/original-surfer/-/original-surfer-5.0.18.tgz#936767855519a3cb9e7cf1e6e4155276e0d57fcf"
