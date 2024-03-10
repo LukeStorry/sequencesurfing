@@ -23,17 +23,17 @@ const { title, description } = Astro.props;
   </head>
   <body>
     <header class="bg-yellow-400 p-4 pl-8">
-      <a href="/" class="flex items-center text-white font-extrabold">
+      <a href="/" class="flex items-center font-extrabold text-white">
         <Image
           src={logo}
-          class="w-24 mr-4"
+          class="mr-4 w-24"
           alt="Logo: a stylised circular wave"
         />
-        <h1 class="text-center text-4xl pb-4">Sequence Surfing</h1>
+        <h1 class="pb-4 text-center text-4xl">Sequence Surfing</h1>
       </a>
     </header>
 
-    <main class="p-4 max-w-5xl mx-auto">
+    <main class="mx-auto max-w-5xl p-4">
       <slot />
     </main>
   </body>

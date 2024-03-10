@@ -10,7 +10,7 @@ const courses = await getCollection("courses");
   title="Home"
   description="Sequence Surfing, coaching, training and conditioning. Join Ben somewhere around the world or online, for a beginner to elite coaching to enable you to get clear progression points and areas to pinpoint future success."
 >
-  <div id="courses" class="flex flex-wrap gap-4 justify-center">
+  <div id="courses" class="flex flex-wrap justify-center gap-4">
     {courses.map((course) => <CourseCard course={course} />)}
   </div>
 </Layout>
