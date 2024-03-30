@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import profile from "../images/profile.jpg";
+
+type Props = {
+  showLink?: boolean;
+};
+
+const { showLink } = Astro.props;
+
+export const description = `Ben Storry is a teacher and travelling surfer, ASI Level 2 Surf Instructor with a background in all things sport.
+Having taught surfing in the UK and France for over 10 years whilst completing his Bachelors degree in Sport and Exercise Science at Loughborough University, Ben brings a research science based fundamental approach to his advanced surf knowledge.
+In recent years, he now brings an holistic approach to surfing through certifications in personal training, Strength and Conditioning, and Yoga instructing.`;
+---
+
+<div
+  id="about"
+  class="grid gap-8 md:grid-cols-2 p-6 m-4 items-center bg-white rounded bg-opacity-80"
+>
+  <div>
+    {
+      description
+        .split("\n")
+        .map((p) => <p class="max-w-md mx-auto my-2">{p}</p>)
+    }
+    {
+      showLink && (
+        <a class="pt-2 float-right font-semibold" href="/about">
+          Read More...
+        </a>
+      )
+    }
+  </div>
+  <Image
+    class="order-first md:order-last"
+    src={profile}
+    alt="background image: Ben catching a barrel"
+  />
+</div>

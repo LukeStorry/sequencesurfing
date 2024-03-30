@@ -1,28 +1,61 @@
 ---
 import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
+import AboutCard, { description } from "../components/AboutCard.astro";
 import Layout from "../layouts/Layout.astro";
-import CourseCard from "../components/CourseCard.astro";
-import sunsetBarrel from "../images/sunset-barrel.jpeg";
-
-const courses = await getCollection("courses");
+import barrel from "../images/barrel.jpeg";
+import sandc from "../images/sandc.png";
 ---
 
-<Layout
-  title="Home"
-  description="Sequence Surfing, coaching, training and conditioning. Join Ben somewhere around the world or online, for a beginner to elite coaching to enable you to get clear progression points and areas to pinpoint future success."
->
+<Layout title="About" description={description}>
   <Image
-    class="mb-4 w-screen min-h-screen -mt-4"
-    src={sunsetBarrel}
-    alt="background image: Ben catching a barrel at sunset"
+    class="w-screen"
+    src={barrel}
+    alt="background image: Ben catching a barrel"
   />
+  <AboutCard />
 
-  <div id="courses" class="flex flex-wrap justify-center gap-4 scroll-m-32">
-    {
-      courses
-        .toSorted((a, b) => (a.data.order > b.data.order ? 1 : -1))
-        .map((course) => <CourseCard course={course} />)
-    }
+  <div class="grid gap-4 sm:grid-cols-3 p-6 m-4">
+    <div class="bg-white rounded bg-opacity-80 p-4">
+      <Image
+        class="order-first md:order-last"
+        src={barrel}
+        alt="section image: Ben hitting a spray topturn"
+      />
+      <h2 class="font-bold text-lg my-4">Surf</h2>
+      <p>
+        Travelling across the world in the search of world-class waves and surf
+        progression, Ben hopes to share his ambition with as many as possible
+        and help people peak in their surfing performance.
+      </p>
+    </div>
+    <div class="bg-white rounded bg-opacity-80 p-4">
+      <Image
+        class="order-first md:order-last"
+        src={sandc}
+        alt="section image: S&C session in the gym"
+      />
+      <h2 class="font-bold text-lg my-4">Strength and Conditioning / Yoga</h2>
+      <p>
+        Through optimal training and self-improvement in yoga, you can enrich
+        your body to reach it's highest level. We have all had times away from
+        the waves, whether from distance or lack of surf, Ben's high level
+        physiology knowledge will ensure you are ready for whenever you hit the
+        surf next.
+      </p>
+    </div>
+    <div class="bg-white rounded bg-opacity-80 p-4">
+      <Image
+        class="order-first md:order-last"
+        src={barrel}
+        alt="section image: Ben teaching students"
+      />
+      <h2 class="font-bold text-lg my-4">Teaching</h2>
+      <p>
+        Ben is also a fully qualified Physical Education teacher in the UK,
+        where he inspires and passes on his ambition and understanding for every
+        sport. Allowing him to break down key movements and explain them in a
+        clear way to help you improve.
+      </p>
+    </div>
   </div>
 </Layout>
