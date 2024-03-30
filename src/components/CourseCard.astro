@@ -2,19 +2,28 @@
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
-type Props = { course: CollectionEntry<"courses"> };
+type Props = {
+  index: number;
+  course: CollectionEntry<"courses">;
+};
 
 const {
+  index,
   course: {
     slug,
     data: { title, description, image },
   },
 } = Astro.props;
+
+const isOdd = index % 2 === 0;
 ---
 
 <li
   id={slug}
-  class="max-w-lg bg-white bg-opacity-85 list-none rounded border-4 border-yellow-200 p-4"
+  class=`max-w-lg list-none pb-8 border-b-4 border-yellow-200 p-4
+ duration-300 taos:opacity-0 ${isOdd ? "taos:translate-x-[-200px]" : "taos:translate-x-[200px]"}
+ [animation-iteration-count:infinite]`
+  data-taos-offset={isOdd ? 200 : 400}
 >
   <a href={slug}>
     <h2 class="text-lg font-bold">{title}</h2>

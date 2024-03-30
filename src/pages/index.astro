@@ -13,16 +13,19 @@ const courses = await getCollection("courses");
   description="Sequence Surfing, coaching, training and conditioning. Join Ben somewhere around the world or online, for a beginner to elite coaching to enable you to get clear progression points and areas to pinpoint future success."
 >
   <Image
-    class="mb-4 w-screen min-h-screen"
+    class="mb-4 w-screen max-w-screen min-h-screen"
     src={sunsetBarrel}
     alt="background image: Ben catching a barrel at sunset"
   />
 
-  <div id="courses" class="flex flex-wrap justify-center gap-4 scroll-m-32 p-4">
+  <div
+    id="courses"
+    class="flex flex-wrap justify-center gap-4 scroll-m-32 p-4 bg-white opacity-90"
+  >
     {
       courses
         .toSorted((a, b) => (a.data.order > b.data.order ? 1 : -1))
-        .map((course) => <CourseCard course={course} />)
+        .map((course, i) => <CourseCard course={course} index={i} />)
     }
   </div>
 </Layout>
