@@ -25,7 +25,7 @@ const isOdd = index % 2 === 0;
           [animation-iteration-count:infinite]`
   data-taos-offset={isOdd ? 200 : 400}
 >
-  <a href={slug}>
+  <a href={slug} class="h-full flex flex-col justify-between gap-2">
     <h2 class="text-lg font-bold">{title}</h2>
     <p class="font-body my-2">{description}</p>
     {image && <Image src={image.src} alt={image.alt} />}

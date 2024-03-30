@@ -14,7 +14,7 @@ In recent years, he now brings an holistic approach to surfing through certifica
 ---
 
 <div
-  class="absolute w-screen text-center rounded-ful text-white text-xl
+  class="absolute w-full max-w-7xl text-center text-white text-xl
   duration-300 taos:opacity-90 opacity-0 [animation-iteration-count:infinite]"
   data-taos-offset="200vh"
 >
@@ -26,11 +26,11 @@ In recent years, he now brings an holistic approach to surfing through certifica
   duration-300 taos:scale-[0.6] taos:opacity-0 [animation-iteration-count:infinite]"
   data-taos-offset="180vh"
 >
-  <div>
+  <div class="flex flex-col justify-between h-full gap-2">
     {
       description
         .split("\n")
-        .map((p) => <p class="max-w-md mx-auto my-2">{p}</p>)
+        .map((p) => <p class="max-w-md font-body mx-auto">{p}</p>)
     }
     {
       showLink && (
