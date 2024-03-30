@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import CourseCard from "../components/CourseCard.astro";
 import sunsetBarrel from "../images/sunset-barrel.jpeg";
+import AboutCard from "../components/AboutCard.astro";
 
 const courses = await getCollection("courses");
 ---
@@ -13,10 +14,12 @@ const courses = await getCollection("courses");
   description="Sequence Surfing, coaching, training and conditioning. Join Ben somewhere around the world or online, for a beginner to elite coaching to enable you to get clear progression points and areas to pinpoint future success."
 >
   <Image
-    class="mb-4 w-screen max-w-screen min-h-screen rounded"
+    class="mb-4 w-screen rounded"
     src={sunsetBarrel}
-    alt="background image: Ben catching a barrel at sunset"
+    alt="hero image: Ben catching a barrel at sunset"
   />
+
+  <AboutCard showLink />
 
   <div
     id="courses"
