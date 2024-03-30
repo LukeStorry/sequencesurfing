@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Original Surfer", ...defaultTheme.fontFamily.sans],
-        body: ["Mooli", ...defaultTheme.fontFamily.sans],
+        sans: ["Saira Variable", ...defaultTheme.fontFamily.sans],
+        body: ["Nunito Variable", ...defaultTheme.fontFamily.sans],
       },
     },
   },
