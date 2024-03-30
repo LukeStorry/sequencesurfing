@@ -4,6 +4,8 @@ import AboutCard, { description } from "../components/AboutCard.astro";
 import Layout from "../layouts/Layout.astro";
 import barrel from "../images/barrel.jpeg";
 import sandc from "../images/sandc.png";
+import surf from "../images/spray-topturn.jpeg";
+import teach from "../images/teach.jpeg";
 ---
 
 <Layout title="About" description={description}>
@@ -20,7 +22,7 @@ import sandc from "../images/sandc.png";
     >
       <Image
         class="order-first md:order-last"
-        src={barrel}
+        src={surf}
         alt="section image: Ben hitting a spray topturn"
       />
       <h2 class="font-bold text-lg my-4">Surf</h2>
@@ -52,7 +54,7 @@ import sandc from "../images/sandc.png";
     >
       <Image
         class="order-first md:order-last"
-        src={barrel}
+        src={teach}
         alt="section image: Ben teaching students"
       />
       <h2 class="font-bold text-lg my-4">Teaching</h2>
