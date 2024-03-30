@@ -9,7 +9,7 @@ type Props = { course: CollectionEntry<"courses"> };
 export async function getStaticPaths() {
   const courses = await getCollection("courses");
   return courses.map((course) => ({
-    params: { slug: course.slug },
+    params: { course: course.slug },
     props: { course },
   }));
 }
@@ -19,11 +19,11 @@ const { title, description, image } = course.data;
 const { Content } = await course.render();
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} whiteBackground>
   <h2 class="text-xl font-bold">{title}</h2>
 
   <p class="p-3 text-lg font-body">{description}</p>
-  {image && <Image src={image.src} alt={image.alt} />}
+  {image && <Image class="w-screen rounded" src={image.src} alt={image.alt} />}
   <div
     class="font-body p-4 prose-headings:font-bold prose-headings:underline prose-headings:mt-2 prose-p:my-4
     prose-li:ml-6 prose-li:list-disc"

@@ -7,9 +7,10 @@ import logo from "../images/logo.svg";
 interface Props {
   title: string;
   description: string;
+  whiteBackground?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, whiteBackground } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,18 +27,25 @@ const { title, description } = Astro.props;
     </script>
   </head>
   <body class="bg-yellow-400">
-    <header class="bg-yellow-400 pt-2 pl-8 sticky top-0 xl:pl-36 z-40">
+    <header
+      class="bg-yellow-400 px-8 xl:px-36 sticky top-0 z-40 flex justify-between"
+    >
       <a href="/" class="flex items-center font-extrabold text-white">
         <Image
           src={logo}
-          class="mr-2 pb-1 w-12"
+          class="mr-2 pt-2 w-12"
           alt="Logo: a stylised circular wave"
         />
-        <h1 class="pb-3 text-center text-2xl">Sequence Surfing</h1>
+        <h1 class="text-center text-2xl">Sequence Surfing</h1>
       </a>
+      <a href="/about" class="flex items-center font-extrabold text-white">
+        About</a
+      >
     </header>
 
-    <main class="mx-auto max-w-7xl scroll-smooth">
+    <main
+      class={`mx-auto max-w-7xl scroll-smooth ${whiteBackground && "bg-white p-4 m-4 rounded"} `}
+    >
       <slot />
     </main>
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
