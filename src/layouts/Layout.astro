@@ -21,6 +21,9 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Sequence Surfing - {title}</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   </head>
   <body>
     <header class="bg-yellow-400 pt-2 pl-8 sticky top-0">
@@ -37,5 +40,6 @@ const { title, description } = Astro.props;
     <main class="mx-auto max-w-7xl scroll-smooth">
       <slot />
     </main>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
   </body>
 </html>

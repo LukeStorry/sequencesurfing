@@ -2,7 +2,10 @@ import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: {
+    files: ["./src/**/*.{astro,ts}"],
+    transform: (content) => content.replace(/taos:/g, ""),
+  },
   theme: {
     extend: {
       fontFamily: {
@@ -11,5 +14,10 @@ export default {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  safelist: [
+    "!duration-[0ms]",
+    "!delay-[0ms]",
+    'html.js :where([class*="taos:"]:not(.taos-init))',
+  ],
+  plugins: [require("@tailwindcss/typography"), require("taos/plugin")],
 };
