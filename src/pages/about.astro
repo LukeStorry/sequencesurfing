@@ -18,7 +18,7 @@ const courses = await getCollection("courses");
     alt="background image: Ben catching a barrel at sunset"
   />
 
-  <div id="courses" class="flex flex-wrap justify-center gap-4 scroll-m-32 p-4">
+  <div id="courses" class="flex flex-wrap justify-center gap-4 scroll-m-32">
     {
       courses
         .toSorted((a, b) => (a.data.order > b.data.order ? 1 : -1))
