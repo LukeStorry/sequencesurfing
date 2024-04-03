@@ -26,7 +26,7 @@ const isOdd = index % 2 === 0;
   data-taos-offset={isOdd ? 200 : 400}
 >
   <a href={slug} class="h-full flex flex-col justify-between gap-2">
-    <h2 class="text-lg font-bold">{title}</h2>
+    <h3 class="text-lg font-bold">{title}</h3>
     <p class="font-body my-2">{description}</p>
     {image && <Image src={image.src} alt={image.alt} />}
     <p class="pt-2 float-right font-semibold">Read More...</p>
